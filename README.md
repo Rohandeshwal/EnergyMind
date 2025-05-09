@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # EnergyMinds
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.7.
@@ -57,3 +58,6 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+=======
+# EnergyMind
+>>>>>>> 2bea2d2e3b0da36b86d2e6d82c517f7c0669edc1
