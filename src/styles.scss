@@ -127,6 +127,8 @@ header .headerLogo {
 }
 header .headerLogo img {
   max-width: 100%;
+  // check this css and fix it
+  height: 16vh !important;
   vertical-align: middle;
   height: auto;
 }
@@ -279,8 +281,14 @@ a {
   text-decoration: none;
   text-decoration: none;
   display: inline-block;
-  color: $black;
+  color: $black !important;
 }
 a:hover {
   color: $black;
 }/*# sourceMappingURL=styles.css.map */
+
+
+// override navbar styles and please remove unused styles from all styles
+.navbar-light .navbar-nav .nav-link{
+color:#ec2029 !important 
+}
