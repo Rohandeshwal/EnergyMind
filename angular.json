@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "energyMinds": {
+    "energyMind": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/energy-minds",
+            "outputPath": "dist/energy-mind",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -34,7 +34,10 @@
             "node_modules/bootstrap-icons/font/bootstrap-icons.css",
             "src/styles.scss"
           ],
-            "scripts": []
+            "scripts": [
+                          
+              "./node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -64,10 +67,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "energyMinds:build:production"
+              "buildTarget": "energyMind:build:production"
             },
             "development": {
-              "buildTarget": "energyMinds:build:development"
+              "buildTarget": "energyMind:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -93,7 +96,7 @@
                "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": [
-                "./node_modules/jquery/dist/jquery.js",
+              
               "./node_modules/bootstrap/dist/js/bootstrap.js"
             ]
           }
