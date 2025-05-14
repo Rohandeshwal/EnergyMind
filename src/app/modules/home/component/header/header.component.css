@@ -1,5 +1,3 @@
-@use "../../../../../assets/styles/variables.scss" as *;
-
 @media (max-width: 767px) {
   .headerLogo {
     width: 100%;
