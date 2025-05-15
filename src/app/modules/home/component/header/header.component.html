@@ -9,25 +9,26 @@
     </div>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href=" #">Home</a>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/home']" routerLinkActive="active-link">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" [routerLink]="['/aboutUS']">About</a>
+          <a class="nav-link" routerLinkActive="active-link" [routerLink]="['/aboutUS']">About</a>
+        </li>
+        <li class="nav-item dropdown" routerLinkActive="active-link">
+          <a class="nav-link dropdown-toggle"  routerLinkActive="active-link" dropdown-toggle href="#" id="navbarDropdown" role="button"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Services </a>
+          <div class="dropdown-menu " aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" routerLinkActive="active-link" [routerLink]="['/services/coal']">Coal</a>
+            <a class="dropdown-item" routerLinkActive="active-link" [routerLink]="['/services/petrol']">Petrol</a>
+            <a class="dropdown-item" routerLinkActive="active-link" [routerLink]="['/services/gas']">Gas</a>
+          </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Services <i class="fa-solid fa-angle-down"></i></a>
-
+          <a class="nav-link" routerLinkActive="active-link" [routerLink]="['/carrer']">Careers</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Investor Relations
-          </a>
-        </li>
-        <li>
-          <a class="nav-link" href="#" [routerLink]="['/carrer']">Careers</a>
-        </li>
-        <li>
-          <a class="nav-link" href="#" [routerLink]="['/contactUs']">Contact Us</a>
+          <a class="nav-link" routerLinkActive="active-link" [routerLink]="['/contactUs']">Contact Us</a>
         </li>
       </ul>
     </div>
