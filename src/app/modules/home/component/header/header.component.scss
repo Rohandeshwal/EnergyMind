@@ -1,8 +1,12 @@
 @use "../../../../../assets/styles/variables.scss" as *;
 
+  .headerLogo {
+    cursor: pointer;
+  }
 @media (max-width: 767px) {
   .headerLogo {
     width: 100%;
+    cursor: pointer;
   }
 }
   .active-link {
