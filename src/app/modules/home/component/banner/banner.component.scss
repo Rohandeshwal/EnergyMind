@@ -1,4 +1,7 @@
 .carousel-indicators {
+  .carousel-caption {
+    text-align: left;
+  }
   [data-bs-target] {
     width: 12px;
     height: 12px;
