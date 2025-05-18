@@ -23,93 +23,19 @@ a:hover {
   color: $black;
 }
 
-footer {
-  font-size: 16px;
-}
-footer .topSec .contactDetails .condtlItemicon {
-  font-size: 20px;
-}
-footer .topSec .contactDetails .condtlItemtext p {
-  margin: 0;
-}
-footer .topSec .contactForm {
-  position: relative;
-}
-footer .topSec .contactForm .input {
-  border: none;
-  color: $black;
-  padding: 14px 71px 14px 0;
-  background: none;
-  border-bottom: 2px solid $paleGray;
-  font-size: 14px;
-  width: 100%;
-}
-footer .topSec .contactForm .btnSec {
-  position: absolute;
-  top: 4px;
-  right: 0;
-  z-index: 3;
-}
-footer .topSec .contactForm .btnSec .contact_submit {
-  font-size: 14px;
-  background-color: $fieryRed;
-  color: $white;
-  border: 1px solid $fieryRed;
-  padding: 8px 14px;
-  transition: 0.25s all ease-in;
-}
-footer .topSec .contactForm .btnSec .contact_submit:hover {
-  color: $fieryRed;
-  background-color: transparent;
-}
-footer .divider {
-  padding: 11px 0;
-}
-footer .divider .dividerin {
-  height: 1px;
-  background-color: $black;
-}
-footer .btmSec p {
-  margin: 0;
-}
-footer .btmSec p a {
-  color: $black;
-}
+// .h1 {
+//   font-size: clamp(42px, 10vw, 92px);
+//   line-height: 1;
+// }
+// .h2 {
+//   font-size: clamp(32px, 6vw, 62px);
+//   line-height: 1;
+// }
+// .h3{
 
-@keyframes fadeInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(100%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-.scroll_top {
-  text-align: center;
-  background: rgba(0, 0, 0, 0.4);
-  text-decoration: none;
-  position: fixed;
-  z-index: 99999;
-  bottom: 125px;
-  right: 0px;
-  -webkit-border-top-left-radius: 5px;
-  -webkit-border-bottom-left-radius: 5px;
-  -moz-border-radius-topleft: 5px;
-  -moz-border-radius-bottomleft: 5px;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  display: inline;
-  cursor: pointer;
-  font-size: 30px;
-  padding: 5px;
-  color: $white;
-  opacity: 0;
-  animation: fadeInRight 1s 1 cubic-bezier(0.77, 0, 0.175, 1);
-}
-
-.scroll_top.show {
-  opacity: 1;
-  animation: fadeInRight 1s 1 cubic-bezier(0.77, 0, 0.175, 1);
-}
+// }
+// .h4 {
+//   font-size: 42px;
+//   color: $fieryRed;
+//   line-height: 52px;
+// }
