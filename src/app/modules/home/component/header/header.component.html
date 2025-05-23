@@ -1,6 +1,6 @@
-<nav class="navbar header navbar-expand-lg navbar-light">
+<nav class="navbar header navbar-expand-lg navbar-light fixed-top bg-white">
   <div class="container">
-    <div class="navbar-brand nav-link align-items-center d-flex headerLogo justify-content-between ">
+    <div class="navbar-brand nav-link align-items-center d-flex headerLogo justify-content-between">
       <img src="../../../../../assets/images/energyLogo.jpg" [routerLink]="['/home']" alt="Energy Minds" width="200" />
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -16,8 +16,9 @@
           <a class="nav-link" routerLinkActive="active-link" [routerLink]="['/aboutUS']">About</a>
         </li>
         <li class="nav-item dropdown" routerLinkActive="active-link">
-          <a class="nav-link dropdown-toggle"  routerLinkActive="active-link" dropdown-toggle href="#" id="navbarDropdown" role="button"
-            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Services </a>
+          <a class="nav-link dropdown-toggle" routerLinkActive="active-link" dropdown-toggle href="#"
+            id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Services </a>
           <div class="dropdown-menu " aria-labelledby="navbarDropdown">
             <a class="dropdown-item" routerLinkActive="active-link" [routerLink]="['/services/coal']">Coal</a>
             <a class="dropdown-item" routerLinkActive="active-link" [routerLink]="['/services/petrol']">Petrol</a>
