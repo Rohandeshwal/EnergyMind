@@ -1,11 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-banner',
-standalone:false,
+  standalone: false,
   templateUrl: './banner.component.html',
-  styleUrl: './banner.component.scss'
+  styleUrls: ['./banner.component.scss']
 })
-export class BannerComponent {
 
+export class BannerComponent implements AfterViewInit {
+  @ViewChild('heroCarousel', { static: true }) heroCarousel!: ElementRef;
+
+  ngAfterViewInit(): void {
+    AOS.init(); 
+    this.heroCarousel.nativeElement.addEventListener('slid.bs.carousel', () => {
+      AOS.refresh();
+    });
+  }
 }

@@ -1,0 +1,7 @@
+.themeColor {
+  color: #0e3371;
+}
+
+:is(h1, h2, h3) {
+  color: #0e3371;
+}
