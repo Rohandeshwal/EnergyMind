@@ -9,10 +9,11 @@ import { AboutUsComponent } from './component/about-us/about-us.component';
 import { CareersComponent } from './component/careers/careers.component';
 import { ContactUsComponent } from './component/contact-us/contact-us.component';
 import { BannerComponent } from './component/banner/banner.component';
+import { PageNotFoundComponent } from './component/page-not-found/page-not-found.component';
 
 
 @NgModule({
-  declarations: [HomeComponent, HeaderComponent, FooterComponent, ServicesComponent, AboutUsComponent, CareersComponent, ContactUsComponent, BannerComponent], // ✅ Declare HomeComponent so it can be used in this module
+  declarations: [HomeComponent, HeaderComponent,PageNotFoundComponent, FooterComponent, ServicesComponent, AboutUsComponent, CareersComponent, ContactUsComponent, BannerComponent], // ✅ Declare HomeComponent so it can be used in this module
   imports: [
     CommonModule,
     RouterModule     
