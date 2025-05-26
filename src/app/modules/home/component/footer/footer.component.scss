@@ -1,7 +1,70 @@
-footer{
-    .btmSec{
+@use "../../../../../assets/styles/variables.scss" as *;
+
+footer {
+  font-size: 16px;
+  .topSec {
+    .contactDetails {
+      .condtlItemicon {
+        font-size: 20px;
+      }
+      .condtlItemtext {
         p {
-            margin: 0;
+          margin: 0;
         }
+      }
     }
+  }
+  .divider {
+    padding: 11px 0;
+    .dividerin {
+      height: 1px;
+      background-color: $black;
+    }
+  }
+  .btmSec {
+    p {
+      margin: 0;
+      a {
+        color: $black;
+      }
+    }
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.scroll_top {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.4);
+  text-decoration: none;
+  position: fixed;
+  z-index: 99999;
+  bottom: 125px;
+  right: 0px;
+  -webkit-border-top-left-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  display: inline;
+  cursor: pointer;
+  font-size: 30px;
+  padding: 5px;
+  color: $white;
+  opacity: 0;
+  animation: fadeInRight 1s 1 cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.scroll_top.show {
+  opacity: 1;
+  animation: fadeInRight 1s 1 cubic-bezier(0.77, 0, 0.175, 1);
 }
