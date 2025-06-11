@@ -1,0 +1,454 @@
+@use "../../../../../assets/styles/variables.scss" as *;
+/*.timeline {
+  position: relative;
+  width: 100%;
+  padding: 30px 0;
+  .timeline-container {
+    position: relative;
+    width: 100%;
+  }
+  .timeline-year {
+    margin: 30px 0;
+  }
+  .timeline-continue {
+    position: relative;
+    width: 100%;
+    padding: 60px 0;
+    &::after {
+      position: absolute;
+      content: "";
+      width: 1px;
+      height: 100%;
+      top: 0;
+      left: 50%;
+      margin-left: -1px;
+      background: $fieryRed;
+    }
+  }
+  .timeline-date {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 41px 0 0 0;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      top: 45px;
+      background: linear-gradient($fieryRed, $fieryRed);
+      box-shadow: 0 0 5px rgba($black, 0.4);
+      border-radius: 15px;
+      z-index: 1;
+    }
+  }
+  .row {
+    &.timeline-left {
+      .timeline-date {
+        &::after {
+          left: -7px;
+        }
+      }
+    }
+    &.timeline-right {
+      .timeline-date {
+        &::after {
+          right: -7px;
+        }
+      }
+      .timeline-box {
+        &::after {
+          border-color: transparent $white transparent transparent;
+        }
+        &::before {
+          border-color: transparent $paleGray transparent transparent;
+        }
+      }
+    }
+  }
+  .timeline-launch {
+    width: 100%;
+    margin: 15px 0;
+    padding: 0;
+    border: none;
+    text-align: center;
+    background: transparent;
+    .timeline-box {
+      &::after {
+        top: -20px;
+        border-color: transparent transparent $paleGray transparent;
+      }
+      &::before {
+        top: -19px;
+        border-color: transparent transparent $white transparent;
+        border-width: 10px;
+        z-index: 1;
+      }
+    }
+    .timeline-text {
+      width: 100%;
+    }
+  }
+  .timeline-box {
+    &::after {
+      top: 26px;
+      border-color: transparent transparent transparent $white;
+      border-width: 10px;
+    }
+    &::before {
+      top: 25px;
+      border-color: transparent transparent transparent $paleGray;
+      border-width: 11px;
+    }
+    .timeline-icon {
+      position: relative;
+      width: 40px;
+      height: auto;
+      float: left;
+    }
+    .timeline-text {
+      position: relative;
+      width: calc(100% - 40px);
+      float: left;
+    }
+  }
+  .timeline-icon {
+    i {
+      font-size: 25px;
+      color: $fieryRed;
+    }
+  }
+  .timeline-text {
+    h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 3px;
+    }
+    p {
+      font-size: 14px;
+      font-weight: 400;
+      margin-bottom: 0;
+    }
+  }
+}
+.timeline .timeline-end,
+.timeline .timeline-start,
+.timeline .timeline-year {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+}
+.timeline .col {
+  position: relative;
+}
+.timeline .timeline-end p,
+.timeline .timeline-start p,
+.timeline .timeline-year p {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  margin: 0;
+  padding: 30px 0;
+  text-align: center;
+  background: linear-gradient($fieryRed, $fieryRed);
+  border-radius: 100px;
+  box-shadow: 0 0 5px rgba($black, 0.4);
+  color: $white;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.timeline .row.timeline-left,
+.timeline .row.timeline-right .timeline-date {
+  text-align: right;
+}
+.timeline .row.timeline-right,
+.timeline .row.timeline-left .timeline-date {
+  text-align: left;
+}
+.timeline .timeline-box,
+.timeline .timeline-launch {
+  position: relative;
+  display: inline-block;
+  margin: 15px;
+  padding: 20px;
+  border: 1px solid $paleGray;
+  border-radius: 6px;
+  background: $white;
+}
+.timeline .timeline-box::after,
+.timeline .timeline-box::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+.timeline .row.timeline-left .timeline-box::after,
+.timeline .row.timeline-left .timeline-box::before {
+  left: 100%;
+}
+.timeline .row.timeline-right .timeline-box::after,
+.timeline .row.timeline-right .timeline-box::before {
+  right: 100%;
+}
+.timeline .timeline-launch .timeline-box::after,
+.timeline .timeline-launch .timeline-box::before {
+  left: 50%;
+  margin-left: -10px;
+}
+
+@media (max-width: 768px) {
+  .timeline {
+    .timeline-continue {
+      &::after {
+        left: 40px;
+      }
+    }
+    .timeline-launch {
+      .timeline-box {
+        margin-left: 0;
+      }
+    }
+    .row {
+      &.timeline-left {
+        .timeline-box {
+          &::after {
+            left: -20px;
+            border-color: transparent $white transparent transparent;
+          }
+          &::before {
+            left: -22px;
+            border-color: transparent $paleGray transparent transparent;
+          }
+        }
+      }
+    }
+  }
+  .timeline .timeline-end,
+  .timeline .timeline-start,
+  .timeline .timeline-year,
+  .timeline .row.timeline-left,
+  .timeline .row.timeline-right .timeline-date,
+  .timeline .row.timeline-right,
+  .timeline .row.timeline-left .timeline-date,
+  .timeline .timeline-launch {
+    text-align: left;
+  }
+  .timeline .row.timeline-left .timeline-date::after,
+  .timeline .row.timeline-right .timeline-date::after {
+    left: 47px;
+  }
+  .timeline .timeline-box,
+  .timeline .row.timeline-right .timeline-date,
+  .timeline .row.timeline-left .timeline-date {
+    margin-left: 55px;
+  }
+  .timeline .timeline-launch .timeline-box::after,
+  .timeline .timeline-launch .timeline-box::before {
+    left: 30px;
+    margin-left: 0;
+  }
+}
+*/
+
+.timeline {
+  position: relative;
+  margin: 50px auto;
+  padding: 40px 0;
+  width: 1000px;
+  box-sizing: border-box;
+}
+.timeline:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background: $paleGray;
+}
+.timeline ul {
+  padding: 0;
+  margin: 0;
+}
+.timeline ul li {
+  list-style: none;
+  position: relative;
+  width: 50%;
+  padding: 20px 40px;
+  box-sizing: border-box;
+}
+.timeline ul li:nth-child(odd) {
+  float: left;
+  text-align: right;
+  clear: both;
+}
+.timeline ul li:nth-child(even) {
+  float: right;
+  text-align: left;
+  clear: both;
+}
+.content {
+  padding-bottom: 20px;
+}
+.timeline ul li:nth-child(odd):before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 24px;
+  right: -6px;
+  background: $fieryRed;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba($paleGray, 0.2);
+}
+.timeline ul li:nth-child(even):before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 24px;
+  left: -4px;
+  background: $fieryRed;
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px rgba($paleGray, 0.2);
+}
+.timeline ul li h3 {
+  padding: 0;
+  margin: 0;
+  color: $fieryRed;
+  font-weight: 600;
+}
+.timeline ul li p {
+  margin: 10px 0 0;
+  padding: 0;
+}
+.timeline ul li .time h4 {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+.timeline ul li:nth-child(odd) .time {
+  position: absolute;
+  top: 12px;
+  right: -165px;
+  margin: 0;
+  padding: 8px 16px;
+  background: $fieryRed;
+  color: $white;
+  border-radius: 18px;
+  box-shadow: 0 0 0 3px rgba($paleGray, 0.3);
+}
+.timeline ul li:nth-child(even) .time {
+  position: absolute;
+  top: 12px;
+  left: -165px;
+  margin: 0;
+  padding: 8px 16px;
+  background: $fieryRed;
+  color: $white;
+  border-radius: 18px;
+  box-shadow: 0 0 0 3px rgba($paleGray, 0.3);
+}
+@media (max-width: 1000px) {
+  .timeline {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .timeline {
+    width: 100%;
+    padding-bottom: 0;
+  }
+  h1 {
+    font-size: 40px;
+    text-align: center;
+  }
+  .timeline:before {
+    left: 20px;
+    height: 100%;
+  }
+  .timeline ul li:nth-child(odd),
+  .timeline ul li:nth-child(even) {
+    width: 100%;
+    text-align: left;
+    padding-left: 50px;
+    padding-bottom: 50px;
+  }
+  .timeline ul li:nth-child(odd):before,
+  .timeline ul li:nth-child(even):before {
+    top: -18px;
+    left: 16px;
+  }
+  .timeline ul li:nth-child(odd) .time,
+  .timeline ul li:nth-child(even) .time {
+    top: -30px;
+    left: 50px;
+    right: inherit;
+  }
+}
+
+// Team Member CSS
+
+// .row {
+//   display: flex;
+//   gap: 20px;
+// }
+.card {
+  // width: 240px;
+  background: $white;
+  padding: 15px;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+.card:hover {
+  box-shadow: 0px 3px 10px 5px $paleGray;
+}
+.card img {
+  max-width: 100%;
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  border: 4px solid $black;
+}
+h1 {
+  margin: 20px 0;
+}
+h2 {
+  margin: 15px 0 5px;
+}
+.card .role {
+  font-size: 80%;
+  color: #444;
+  margin-bottom: 20px;
+}
+.card a {
+  background: $black;
+  color: $white;
+  padding: 10px 15px;
+  width: 100%;
+  display: block;
+  border-radius: 20px;
+  text-decoration: none;
+  margin-top: 15px;
+}
+
+@media (max-width: 767px) {
+  .row {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .card {
+    flex: 0 0 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 420px) {
+  .card {
+    flex: 0 0 calc(100% - 20px);
+    max-width: calc(100% - 20px);
+  }
+}

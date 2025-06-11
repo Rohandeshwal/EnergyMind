@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import * as AOS from 'aos';
 
 
 @Component({
@@ -8,6 +9,18 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
-  title = 'energyMind';
+
+
+export class AppComponent implements OnInit, AfterViewInit {
+    title = 'energyMind';
+  ngOnInit(): void {
+    AOS.init({
+      duration: 1000,  
+      once: true       
+    });
+  }
+
+  ngAfterViewInit(): void {
+    AOS.refresh();  
+  }
 }
