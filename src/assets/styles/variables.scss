@@ -10,3 +10,7 @@ $paleGray: #e9e9e9;
 :is(h1, h2, h3) {
   color: $fieryRed;
 }
+
+.carousel-inner * {
+  color: $white;
+}

@@ -1,15 +1,33 @@
 @use "../../../../../assets/styles/variables.scss" as *;
 
-  .headerLogo {
-    cursor: pointer;
+.headerLogo {
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  border: none;
+  a {
+    background: rgba($fieryRed, 0);
+    &:hover {
+      font-weight: bold;
+    }
   }
+}
+
+@media (min-width: 992px) {
+  .dropdown-menu {
+    background: rgba($fieryRed, 0.8);
+    a {
+      color: $white;
+    }
+  }
+}
 @media (max-width: 991px) {
   .headerLogo {
     width: 100%;
     cursor: pointer;
   }
 }
-  .active-link {
-    font-weight: bold;
-
-  }
+.active-link {
+  font-weight: bold;
+}
